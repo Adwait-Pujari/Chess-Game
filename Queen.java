@@ -11,6 +11,7 @@ public class Queen extends ChessPiece{
     public Queen(String name, String newColor, Board theBoard)
     {
         super(name,newColor,theBoard);
+        super.setGraphics("QueenBlack.png","QueenWhite.png");
     }
 
 }
