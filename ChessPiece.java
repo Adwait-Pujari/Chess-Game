@@ -19,7 +19,11 @@ public abstract class ChessPiece{
 	// Will enable additional debugging output. 
 	protected final boolean DEBUG_MODE = false;
 
-	// Base constructor. 
+	// Base constructor.
+	public ChessPiece()
+	{
+
+	}
 	// type is the piece type 
 	// color is "BLACK" or "WHITE"
 	// theBoard is the current board in use. 
