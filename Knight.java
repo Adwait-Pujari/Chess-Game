@@ -1,6 +1,7 @@
 public class Knight extends ChessPiece{
     private String newColor;
     private Board theBoard;
+    private String name;
     public Knight(String newColor, Board theBoard)
     {
         this.newColor=newColor;
@@ -8,6 +9,6 @@ public class Knight extends ChessPiece{
     }
     public Knight(String name, String newColor, Board theBoard)
     {
-
+        super(name,newColor,theBoard);
     }
 }
