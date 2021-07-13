@@ -1,11 +1,9 @@
 public class Pawn extends ChessPiece{
-    private String newColor;
-    private Board theBoard;
-    private String name;
+
     public Pawn(String newColor, Board theBoard)
     {
-        this.newColor=newColor;
-        this.theBoard=theBoard;
+        super("Pawn", newColor,theBoard);
+
     }
     public Pawn(String name, String newColor, Board theBoard)
     {
