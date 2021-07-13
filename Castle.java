@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public class Castle {
+public class Castle extends ChessPiece{
+    public Castle(String newColor, Board theBoard)
+    {
+
+    }
 }

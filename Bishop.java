@@ -1,2 +1,6 @@
-package PACKAGE_NAME;public class Bishop {
+public class Bishop extends ChessPiece{
+    public Bishop(String newColor, Board theBoard)
+    {
+
+    }
 }
