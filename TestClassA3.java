@@ -10,10 +10,10 @@ public class TestClassA3{
     // And providing the test class as part of the handin package. 
     
   	phase1();
-  	StdDraw.show(pauseTime);  // Draw all art and pause for 1 second
-  	phase2(); // Castle and Pawn Test
-  	StdDraw.show(pauseTime); // Draw all art and pause for 1 second
-  	phase3();
+//  	StdDraw.show(pauseTime);  // Draw all art and pause for 1 second
+//  	phase2(); // Castle and Pawn Test
+//  	StdDraw.show(pauseTime); // Draw all art and pause for 1 second
+//  	phase3();
 
   }
 

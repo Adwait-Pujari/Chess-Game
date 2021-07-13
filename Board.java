@@ -318,7 +318,7 @@ public class Board {
   // sets the pieces 
   // Hard coded to set the pieces. 
   public void resetBoard(){
-/* Add After you have created pieces 
+// Add After you have created pieces
 
     
     // Base Board
@@ -368,7 +368,7 @@ public class Board {
     boardState[7][5] = new Bishop(black, this);
     boardState[7][3] = new Queen(black, this);
     boardState[7][4] = new King(black, this);
-    */
+
   }
   
 
