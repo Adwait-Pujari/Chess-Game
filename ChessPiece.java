@@ -20,10 +20,7 @@ public abstract class ChessPiece{
 	protected final boolean DEBUG_MODE = false;
 
 	// Base constructor.
-	public ChessPiece()
-	{
 
-	}
 	// type is the piece type 
 	// color is "BLACK" or "WHITE"
 	// theBoard is the current board in use. 

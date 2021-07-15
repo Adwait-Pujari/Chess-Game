@@ -4,11 +4,13 @@ public class Pawn extends ChessPiece{
     {
         super("Pawn", newColor,theBoard);
         super.setGraphics("PawnBlack.png","PawnWhite.png");
+       // super.toString();
 
     }
     public Pawn(String name, String newColor, Board theBoard)
     {
         super(name,newColor,theBoard);
         super.setGraphics("PawnBlack.png","PawnWhite.png");
+       // super.toString();
     }
 }

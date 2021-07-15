@@ -14,7 +14,7 @@ public class GameController{
   	Board board = new Board();
 
   	// Comment out when loading from file. 
-    board.resetBoard(); // reset pieces. 
+    board.resetBoard(); // reset pieces.
     
   	// *** Uncomment to run with board from file. 
     //BoardLoader.loadBoardState(board, "StandardBoard.txt");

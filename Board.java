@@ -25,9 +25,12 @@ public class Board {
   private final boolean DEBUG_MODE = false;
 
   // ----- Board Initialization -----
+
   // Set all values of array to Empty
   public Board(){
-    // Inititialize and create the array. 
+    // Initialize and create the array.
+    //boardState=new ChessPiece[BOARD_SIZE][BOARD_SIZE];
+
     clearBoard();
   }
 
