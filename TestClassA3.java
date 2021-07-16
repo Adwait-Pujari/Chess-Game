@@ -8,12 +8,14 @@ public class TestClassA3{
     // it can be hard to tell what is being tested!
     // This is all just provided as an example, you should be testing your own code yourself. 
     // And providing the test class as part of the handin package. 
-    
-  	phase1();
+//     phase1();
 //  	StdDraw.show(pauseTime);  // Draw all art and pause for 1 second
 //  	phase2(); // Castle and Pawn Test
 //  	StdDraw.show(pauseTime); // Draw all art and pause for 1 second
 //  	phase3();
+     Board obj=new Board();
+     obj.drawBoard();
+     BoardLoader.loadBoardState(obj,".//Boards//StandardBoard.txt");
 
   }
 

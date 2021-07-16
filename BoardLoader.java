@@ -6,15 +6,15 @@ import java.util.*;
 public class BoardLoader {
     private static String[][] boardFile;
 
-    public static void main(String args[]) {
-        parseFile(".//Boards//StandardBoard.txt");
-        
-    }
+//    public static void main(String args[]) {
+//        parseFile(".//Boards//StandardBoard.txt");
+//
+//    }
 
     public static void loadBoardState(Board theBoard, String fileName) {
         parseFile(fileName);
         loadPiecesFromString(theBoard, parseFile(fileName));
-        //loadChessPiece(theBoard,);
+
 
     }
 
@@ -30,10 +30,10 @@ public class BoardLoader {
             boardFile = new String[arrayLengthRow][arrayLengthCol];
 
             while (row != null) {
-                for (int i = 0; i < boardFile.length; i++) {
+                for (int i = boardFile.length-1; i >=0; i--) {
                     row = br.readLine();
                     sc = new Scanner(row);
-                    for (int j = 0; j < boardFile[i].length; j++) {
+                    for (int j = boardFile[i].length-1; j >=0; j--) {
                         String temp = sc.next();
                         boardFile[i][j] = temp;
                     }
@@ -46,12 +46,7 @@ public class BoardLoader {
             e.printStackTrace();
             System.out.println(e.toString());
         }
-        for (int i = 0; i < boardFile.length; i++) {
-            for (int j = 0; j < boardFile[i].length; j++) {
-                System.out.print(boardFile[i][j] + " ");
-            }
-            System.out.println("");
-        }
+
         return boardFile;
     }
 
