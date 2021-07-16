@@ -29,7 +29,7 @@ public class BoardLoader {
             int arrayLengthCol = sc.nextInt();
             boardFile = new String[arrayLengthRow][arrayLengthCol];
 
-            while (row != null) {
+            while (row!=null) {
                 for (int i = boardFile.length-1; i >=0; i--) {
                     row = br.readLine();
                     sc = new Scanner(row);
@@ -65,35 +65,42 @@ public class BoardLoader {
 
     private static ChessPiece loadChessPiece(Board targetBoard, String code) {
         ChessPiece loadPiece=null;
-        if (code.charAt(0) == 'B') {
+        String Piece_colour="BLACK";
+        if(code.charAt(0)=='W')
+        {
+            Piece_colour="WHITE";
+        }
+        if (code.charAt(0) == 'B' || code.charAt(0)=='W') {
             if (code.charAt(code.length() - 1) == 'P')
-                loadPiece = new Pawn("BLACK", targetBoard);
+                loadPiece = new Pawn(Piece_colour, targetBoard);
             else if (code.charAt(code.length() - 1) == 'K')
-                loadPiece = new King("BLACK", targetBoard);
+                loadPiece = new King(Piece_colour, targetBoard);
             else if (code.charAt(code.length() - 1) == 'Q')
-                loadPiece = new Queen("BLACK", targetBoard);
+                loadPiece = new Queen(Piece_colour, targetBoard);
             else if (code.charAt(code.length() - 1) == 'B')
-                loadPiece = new Bishop("BLACK", targetBoard);
+                loadPiece = new Bishop(Piece_colour, targetBoard);
             else if (code.charAt(code.length() - 1) == 'C')
-                loadPiece = new Castle("BLACK", targetBoard);
+                loadPiece = new Castle(Piece_colour, targetBoard);
             else if (code.charAt(code.length() - 1) == 'N')
-                loadPiece = new Knight("BLACK", targetBoard);
+                loadPiece = new Knight(Piece_colour, targetBoard);
 
-        } else if (code.charAt(0) == 'W') {
-            if (code.charAt(code.length() - 1) == 'P')
-                loadPiece = new Pawn("WHITE", targetBoard);
-            else if (code.charAt(code.length() - 1) == 'K')
-                loadPiece = new King("WHITE", targetBoard);
-            else if (code.charAt(code.length() - 1) == 'Q')
-                loadPiece = new Queen("WHITE", targetBoard);
-            else if (code.charAt(code.length() - 1) == 'B')
-                loadPiece = new Bishop("WHITE", targetBoard);
-            else if (code.charAt(code.length() - 1) == 'C')
-                loadPiece = new Castle("WHITE", targetBoard);
-            else if (code.charAt(code.length() - 1) == 'N')
-                loadPiece = new Knight("WHITE", targetBoard);
-
-        } else
+        }
+//        else if (code.charAt(0) == 'W') {
+//            if (code.charAt(code.length() - 1) == 'P')
+//                loadPiece = new Pawn("WHITE", targetBoard);
+//            else if (code.charAt(code.length() - 1) == 'K')
+//                loadPiece = new King("WHITE", targetBoard);
+//            else if (code.charAt(code.length() - 1) == 'Q')
+//                loadPiece = new Queen("WHITE", targetBoard);
+//            else if (code.charAt(code.length() - 1) == 'B')
+//                loadPiece = new Bishop("WHITE", targetBoard);
+//            else if (code.charAt(code.length() - 1) == 'C')
+//                loadPiece = new Castle("WHITE", targetBoard);
+//            else if (code.charAt(code.length() - 1) == 'N')
+//                loadPiece = new Knight("WHITE", targetBoard);
+//
+//        }
+          else
             loadPiece = null;
 
         return loadPiece;

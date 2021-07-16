@@ -173,7 +173,7 @@ public class Board {
   public void drawSelectedForAllValidMoves(int row, int col){
 
     if( hasPiece(row,col)){
-      // get the piece frmo the tile. 
+      // get the piece from the tile.
       ChessPiece cp = getPiece(row, col);
 
       // Simply brute for test
