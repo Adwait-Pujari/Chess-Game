@@ -10,4 +10,16 @@ public class King extends ChessPiece{
         super(name,newColor,theBoard);
         super.setGraphics("KingBlack.png","KingWhite.png");
     }
+
+    @Override
+    public boolean isValidMove(int currentRow, int currentCol, int futureRow, int futureCol) {
+        boolean Validity=false; // Check if a move is valid or not
+
+        if(futureCol==currentCol+1 || futureRow==currentRow+1 || futureRow==currentRow-1 || futureCol==currentCol-1)
+            Validity=true;
+
+        return Validity;
+    }
+
+
 }

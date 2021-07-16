@@ -85,21 +85,6 @@ public class BoardLoader {
                 loadPiece = new Knight(Piece_colour, targetBoard);
 
         }
-//        else if (code.charAt(0) == 'W') {
-//            if (code.charAt(code.length() - 1) == 'P')
-//                loadPiece = new Pawn("WHITE", targetBoard);
-//            else if (code.charAt(code.length() - 1) == 'K')
-//                loadPiece = new King("WHITE", targetBoard);
-//            else if (code.charAt(code.length() - 1) == 'Q')
-//                loadPiece = new Queen("WHITE", targetBoard);
-//            else if (code.charAt(code.length() - 1) == 'B')
-//                loadPiece = new Bishop("WHITE", targetBoard);
-//            else if (code.charAt(code.length() - 1) == 'C')
-//                loadPiece = new Castle("WHITE", targetBoard);
-//            else if (code.charAt(code.length() - 1) == 'N')
-//                loadPiece = new Knight("WHITE", targetBoard);
-//
-//        }
           else
             loadPiece = null;
 
