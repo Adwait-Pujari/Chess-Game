@@ -22,9 +22,14 @@ public class Pawn extends ChessPiece{
         String currentTileColour=super.getBoard().getPieceColor(currentRow,currentCol);
 
 
+        boolean checkPieceForWhite=super.getBoard().hasPiece(3,currentCol);
+        boolean checkPieceForBlack=super.getBoard().hasPiece(4,currentCol);
 
         if(currentTileColour=="WHITE" )
         {
+            //System.out.println(currentRow+" " +currentCol);
+            if(currentRow==1 && !checkPieceForWhite && futureRow==currentRow+2 && futureCol==currentCol)
+                validity=true;
             if(futureRow==currentRow+1 && futureCol==currentCol)
             {
                 validity=true;
@@ -40,6 +45,8 @@ public class Pawn extends ChessPiece{
         }
         else if(currentTileColour=="BLACK")
         {
+            if(currentRow==6 && !checkPieceForBlack && futureRow==currentRow-2 && futureCol==currentCol)
+                validity=true;
             if(futureRow==currentRow-1 && futureCol==currentCol)
             {
                 validity=true;
@@ -52,7 +59,7 @@ public class Pawn extends ChessPiece{
 //                validity=true;
         }
 
-        if(currentTileColour==futureTileColour )
+        if(currentTileColour.equalsIgnoreCase(futureTileColour) )
             validity=false;
         return validity;
     }
