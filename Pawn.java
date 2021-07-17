@@ -14,7 +14,7 @@ public class Pawn extends ChessPiece{
 
     }
 
-    @Override
+
     public boolean isValidMove(int currentRow, int currentCol, int futureRow, int futureCol) {
         boolean validity=false;
 
@@ -33,6 +33,10 @@ public class Pawn extends ChessPiece{
             {
                 validity=false;
             }
+//            if(super.getBoard().hasPiece(currentRow+1,currentCol+1) || super.getBoard().hasPiece(currentRow+1,currentCol-1))
+//                validity=true;
+
+
         }
         else if(currentTileColour=="BLACK")
         {
@@ -44,6 +48,8 @@ public class Pawn extends ChessPiece{
             {
                 validity=false;
             }
+//            if(super.getBoard().hasPiece(currentRow-1,currentCol-1) || super.getBoard().hasPiece(currentRow-1,currentCol+1))
+//                validity=true;
         }
 
         if(currentTileColour==futureTileColour )

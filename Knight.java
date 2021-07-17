@@ -26,7 +26,7 @@ public class Knight extends ChessPiece{
         futureCol==currentCol+2 && futureRow==currentRow-1 || futureCol==currentCol-2&& futureRow==currentRow-1)
             validity=true;
 
-        if(currentTileColour==futureTileColour )
+        if(currentTileColour.equalsIgnoreCase(futureTileColour) )
             validity=false;
 
         return validity;

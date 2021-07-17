@@ -19,7 +19,7 @@ public class King extends ChessPiece{
         String currentTileColour=super.getBoard().getPieceColor(currentRow,currentCol);
 
 
-//&& futureTileColour!=currentTileColour
+
         if(futureCol==currentCol+1 && futureRow==currentRow || futureCol==currentCol-1 && futureRow==currentRow
         || futureRow==currentRow+1 && futureCol==currentCol || futureRow==currentRow-1 && futureCol==currentCol)
             Validity=true;
@@ -28,6 +28,7 @@ public class King extends ChessPiece{
             Validity=true;
         if(futureTileColour.equals(currentTileColour))
             Validity=false;
+
         return Validity;
     }
 
