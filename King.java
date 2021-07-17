@@ -15,9 +15,14 @@ public class King extends ChessPiece{
     public boolean isValidMove(int currentRow, int currentCol, int futureRow, int futureCol) {
         boolean Validity=false; // Check if a move is valid or not
 
-        if(futureCol==currentCol+1 || futureRow==currentRow+1 || futureRow==currentRow-1 || futureCol==currentCol-1)
+        String futureTileColour=super.getBoard().getPieceColor(futureRow,futureCol);
+        String currentTileColour=super.getBoard().getPieceColor(currentRow,currentCol);
+
+        if(futureCol==currentCol+1 || futureRow==currentRow+1 || futureRow==currentRow-1 || futureCol==currentCol-1  )
             Validity=true;
 
+        if(futureTileColour==currentTileColour)
+            Validity=false;
         return Validity;
     }
 
