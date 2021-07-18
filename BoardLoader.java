@@ -6,18 +6,21 @@ import java.util.*;
 public class BoardLoader {
     private static String[][] boardFile;
 
-//    public static void main(String args[]) {
-//        parseFile(".//Boards//StandardBoard.txt");
-//
-//    }
-
+    /**
+     * To call the other functions of the class
+     * @param theBoard Board object.
+     * @param fileName File passed to load the board.
+     */
     public static void loadBoardState(Board theBoard, String fileName) {
         parseFile(fileName);
         loadPiecesFromString(theBoard, parseFile(fileName));
-
-
     }
 
+    /**
+     * To read and store the file in an array.
+     * @param fileName The standard board file to read.
+     * @return Array in which the file is stored.
+     */
     private static String[][] parseFile(String fileName) {
         try {
             FileReader fr = new FileReader(fileName);
@@ -46,10 +49,14 @@ public class BoardLoader {
             e.printStackTrace();
             System.out.println(e.toString());
         }
-
         return boardFile;
     }
 
+    /**
+     * Method to load the pieces part 1.
+     * @param targetBoard Board variable used to draw and set the pieces
+     * @param boardCodes The array in which the file is stored
+     */
     private static void loadPiecesFromString(Board targetBoard, String[][] boardCodes) {
 
         for(int i=0;i<boardCodes.length;i++)
@@ -63,6 +70,12 @@ public class BoardLoader {
 
     }
 
+    /**
+     * Method to load the piece part 2.
+     * @param targetBoard Board variable.
+     * @param code To check the file initials like BP BK WP Wk....
+     * @return ChessPiece loadPiece
+     */
     private static ChessPiece loadChessPiece(Board targetBoard, String code) {
         ChessPiece loadPiece=null;
         String Piece_colour="BLACK";

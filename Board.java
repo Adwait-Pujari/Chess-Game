@@ -248,10 +248,10 @@ public class Board {
     for( int row = 0; row < BOARD_SIZE; row++ ){
       for( int col = 0; col < BOARD_SIZE; col++ ){
         if( hasPiece(row, col) && getPieceColor(row,col).equals(givenColor)){
-   // uncomment for assignment
-   //       if(getPiece(row,col) instanceof King){
+//    uncomment for assignment
+          if(getPiece(row,col) instanceof King){
             returnVal = true;
-  //      }
+        }
         }
       }
     }
