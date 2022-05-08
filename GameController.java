@@ -1,7 +1,3 @@
-
-// GameController for our Chess Game
-// Assignment 3 - Comp 1020.
-// c D. Fries 2021
 // This class handles turn taking, input, selection of tiles and calling the Board to verify 
 // and execute moves. Includes all main game logic. 
 public class GameController{
